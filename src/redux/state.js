@@ -11,7 +11,7 @@ let state = {
             {id: 2, message: "YEYESSS!", likesCount: 18}
         ],
 
-        newPostText: 'it-kamasutra.com'
+        newPostText: 'PornHub.com'
     },
 
     dialogsPage: {

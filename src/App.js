@@ -24,21 +24,21 @@ const App = (props) => {
                     {/*<Route path='/settings' component={Settings}/>*/}
 
                     <Route path='/dialogs'
-                           render={ () => <Dialogs dataDialogs={props.appState.dialogsPage}
-                                                   updateNewMessageTextFromApp={props.appUpdateNewMessageText}
-                                                   newMessageTextFromApp={props.appState.dialogsPage.newMessageText}
-                                                   addMessageFromApp={props.appAddMessage}/>}/>
+                           render={() => <Dialogs dataDialogs={props.appState.dialogsPage}
+                                                  updateNewMessageTextFromApp={props.appUpdateNewMessageText}
+                                                  newMessageTextFromApp={props.appState.dialogsPage.newMessageText}
+                                                  addMessageFromApp={props.appAddMessage}/>}/>
                     <Route path='/profile'
-                           render={ () => <Profile dataProfile={props.appState.profilePage}
-                                                   newPostTextFromApp={props.appState.profilePage.newPostText}
-                                                   updateNewPostTextFromApp={props.appUpdateNewPostText}
-                                                   addPostFromApp={props.appAddPost}/>}/>
+                           render={() => <Profile dataProfile={props.appState.profilePage}
+                                                  newPostTextFromApp={props.appState.profilePage.newPostText}
+                                                  updateNewPostTextFromApp={props.appUpdateNewPostText}
+                                                  addPostFromApp={props.appAddPost}/>}/>
                     <Route path='/news'
-                           render={ () => <News /> }/>
+                           render={() => <News/>}/>
                     <Route path='/music'
-                           render={ () => <Music /> }/>
+                           render={() => <Music/>}/>
                     <Route path='/settings'
-                           render={ () => <Settings /> }/>
+                           render={() => <Settings/>}/>
                 </div>
             </div>
         </BrowserRouter>);
