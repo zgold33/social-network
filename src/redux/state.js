@@ -1,3 +1,8 @@
+const ADD_POST = 'ADD-POST';
+const UPDATE_NEW_POST = 'UPDATE-NEW-POST-TEXT';
+const ADD_MESSAGE = 'ADD-MESSAGE';
+const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
+
 let store = {
     _state: {
 
@@ -48,20 +53,6 @@ let store = {
         this._callSubscriber = observer;
     },
 
-    // addMessage() {
-    //     let newMessage = {
-    //         id: 6,
-    //         message: this._state.dialogsPage.newMessageText,
-    //     }
-    //     this._state.dialogsPage.messages.push(newMessage);
-    //     this._state.dialogsPage.newMessageText = '';
-    //     this._callSubscriber(this._state);
-    // },
-    // updateNewMessageText(newMessageText) {
-    //     this._state.dialogsPage.newMessageText = newMessageText;
-    //     this._callSubscriber(this._state);
-    // },
-
     dispatch(action) {
         if (action.type === 'ADD-POST') {
             let newPost = {
@@ -89,6 +80,24 @@ let store = {
         }
     }
 }
+
+// export const addPostActionCreator = () => {
+//     return {
+//         type: ADD_POST
+//     }
+// }
+
+export const addPostActionCreator = () => ({type: ADD_POST})  // Тоже самое, что и выше
+
+export const updateNewPostTextActionCreator = (textPost) =>
+    ({type: UPDATE_NEW_POST, newPostText: textPost})
+
+export const addMessageActionCreator = () => ({type: ADD_MESSAGE})
+
+export const updateNewMessageActionCreator = (textMessage) =>
+    ({type: UPDATE_NEW_MESSAGE_TEXT, newMessageText: textMessage})
+
+
 
 export default store;
 window.store = store;
