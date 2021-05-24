@@ -45,7 +45,6 @@ let store = {
         console.log('state changed')
     },
     getState() {
-        debugger;
         return this._state;
     },
     subscribe(observer) {
